@@ -7,7 +7,7 @@ r="\033[1;31m"
 w="\033[1;37m"
 
 if "linux" in sys.platform:
-	print "Can't Reload This Page !"
+	print "Can't Reload This Page !".format(r)
 	else:
 		
 def main():
@@ -23,14 +23,14 @@ def main():
        
       >> WINDOWS USER >>
 
-"""
+""".format(r, w)
 time.sleep(2)
 os.system("cls")
-print "[!] Starting webDav [!]"
+print "[!] Starting webDav [!]".format(r)
 time.sleep(3)
 os.system("cls")
-print "[1] WebDav"
-print "[2] Exit"
+print "[1] WebDav".format(r,w)
+print "[2] Exit".format(w, r)
 select= input("root@hansputera~# ")
 filtering(select)
 
@@ -38,7 +38,7 @@ def filtering(pilihan):
 	if pilihan == 1:
 		print """
 		Usage : python2 webs.py nameweb.xyz scriptDeface.html
-		"""
+		""".format(w)
 	elif pilihan == 2:
 		print(r+"[!] Exited Program [!]"+w)
 		os.sys.exit
