@@ -50,7 +50,7 @@ _    _   _  ___  _   ___   ____  __  ___  _   _ ____
  / ___ \| |\  | |_| | |\  | | | | |  | | |_| | |_| |___) |
 /_/   \_\_| \_|\___/|_| \_| |_| |_|  |_|\___/ \___/|____/
 """)
- print("[*] Cek File Di Target : "+sys.argv[1]+"/"+sys.argv[2])
+ print("[*] Check file in target: "+sys.argv[1]+"/"+sys.argv[2])
  r = requests.get(sys.argv[1] +"/"+ sys.argv[2])
  if r.status_code == requests.codes.ok:
   print("[*] Founded a file in target . . .")
