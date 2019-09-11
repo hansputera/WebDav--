@@ -2,11 +2,15 @@ import os
 import time
 import sys
 
+
+r="\033[1;31m"
+w="\033[1;37m"
+
 if "linux" in sys.platform:
 	print "Can't Reload This Page !"
 	else:
 		
-def menu():
+def main():
 	os.system("cls")
 	time.sleep(2)
 	print""" 
@@ -25,14 +29,32 @@ os.system("cls")
 print "[!] Starting webDav [!]"
 time.sleep(3)
 os.system("cls")
-print """
+print "[1] WebDav"
+print "[2] Exit"
+select= input("root@hansputera~# ")
+filtering(select)
 
-Usage : python2 webs.py namewebsite.com scriptDeface.htm
+def filtering(pilihan):
+	if pilihan == 1:
+		print """
+		Usage : python2 webs.py nameweb.xyz scriptDeface.html
+		"""
+	elif pilihan == 2:
+		print(r+"[!] Exited Program [!]"+w)
+		os.sys.exit
+	else:
+		print(r+"[!] Exited Program [!]"+w)
+		os.sys.exit
 
-"""
 
 
-menu()
 
+
+
+
+
+if __name__ == '__main__':
+	
+main()
 
 
